@@ -1,0 +1,49 @@
+class Car {
+  String _model; 
+  int _year;     
+
+  
+  String get model => _model;
+
+  
+  set model(String value) {
+    _model = value;
+  }
+
+  
+  int get year => _year;
+
+  
+  set year(int value) {
+    if (value > 1900 && value < 2023) {
+      _year = value;
+    } else {
+      print('Invalid year!');
+    }
+  }
+
+  
+  Car(this._model, this._year);
+
+  
+  void displayInfo() {
+    print('Model: $_model');
+    print('Year: $_year');
+  }
+}
+
+void main() {
+  
+  Car myCar = Car('Toyota', 2010);
+
+  
+  print('Car Model: ${myCar.model}');
+  print('Car Year: ${myCar.year}');
+
+  
+  myCar.model = 'Honda';
+  myCar.year = 2025; 
+
+ 
+  myCar.displayInfo();
+}
