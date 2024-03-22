@@ -1,0 +1,43 @@
+abstract class Shape {
+  
+  double area(); 
+  
+  void displayArea() {
+    print("Area: ${area()}");
+  }
+}
+
+
+class Rectangle extends Shape {
+  double width;
+  double height;
+
+  Rectangle(this.width, this.height);
+
+  @override
+  double area() {
+    return width * height;
+  }
+}
+
+
+class Circle extends Shape {
+  double radius;
+
+  Circle(this.radius);
+
+  @override
+  double area() {
+    return 3.14 * radius * radius;
+  }
+}
+
+void main() {
+  
+  Rectangle rectangle = Rectangle(5, 3);
+  Circle circle = Circle(4);
+
+  
+  rectangle.displayArea(); // Output: Area: 15.0
+  circle.displayArea();    // Output: Area: 50.24
+}
