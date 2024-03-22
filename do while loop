@@ -1,0 +1,8 @@
+void main() {
+  var a = 1;
+  var b = 10; 
+  do {
+    print(a);
+    a = a + 1;
+  } while (a < b);
+}
